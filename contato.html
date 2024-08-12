@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decorti: Cortinas e Persianas</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/6dda5f6271.js" crossorigin="anonymous"></script>
+
+    <style>
+     body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+article {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #333;
+}
+
+p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 10px;margin-bottom: 20px;
+}
+
+.contact-item {
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2em;
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s;
+    flex-basis: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.contact-item i {
+    font-size: 1.5em;
+}
+
+.contact-item:hover {
+    transform: rotate(3deg);
+}
+
+.contact-item:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.whatsapp:hover {
+    background-color: #1EBE57;
+}
+
+.emailc {
+    background-color: #D44638;
+}
+
+.emailc:hover {
+    background-color: #BB3E30;
+}
+
+.instagram {
+    background-color: #C13584;
+}
+
+.instagram:hover {
+    background-color: #AD306C;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.facebook:hover {
+    background-color: #334D84;
+}
+.contact-details {
+    margin-top: 5em;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-details p {
+    font-size: 1.1em;
+    color: #333;
+    margin: 5px 0;
+}
+.contact-details i {
+    font-size: 1.2em; 
+    color: #666;display: inline-block;
+    vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+    .contact-item {
+        flex-basis: calc(100% - 20px);
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+    .contact-details p {
+        font-size: 1em;
+    }
+}
+
+
+  
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const contactItems = document.querySelectorAll('.contact-item');
+
+    contactItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            const confirmation = confirm('Você está sendo redirecionado para ' + this.querySelector('span').innerText + '. Deseja continuar?');
+            if (!confirmation) {
+                event.preventDefault();
+            }
+        });
+    });
+});
+    </script>
+</head>
+<body>
+    <header>
+        <img
+          src="img/decorti_logo.jpeg"
+          height="100"
+          alt="Decorti cortinas e persianas"
+        />
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            
+            
+          </ul>
+        </nav>
+      </header>
+      <Br><Br><Br><Br><Br><Br><Br>
+        <article>
+            <h1>Contato</h1>
+            <p>Entre em contato conosco clicando em um dos canais abaixo:</p>
+        </article>
+        <main>
+            <div class="contact-container">
+                <a href="https://api.whatsapp.com/send?phone=5517997499338&text=Ol%C3%A1,%20Vi%20o%20site%20da%20Decorti%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" target="_blank" class="contact-item whatsapp" data-tooltip="Fale conosco via WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="mailto:decorticortinasepersianas@gmail.com" class="contact-item emailc" data-tooltip="Envie-nos um email">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://www.instagram.com/decorti_cortinasepersianas/" target="_blank" class="contact-item instagram" data-tooltip="Siga-nos no Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61556028490687" target="_blank" class="contact-item facebook" data-tooltip="Curta nossa página no Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+            </div>
+            <div class="contact-details">
+                <p>Ou anote:</p>
+                <i class="fab fa-whatsapp"></i><p>WhatsApp: +55 17 99749-9338</p>
+                <i class="fas fa-envelope"></i><p>Email: decorticortinasepersianas@gmail.com</p>
+                <i class="fab fa-instagram"></i><p>Instagram: @decorti_cortinasepersianas</p>
+                <i class="fab fa-facebook-f"></i><p>Facebook: Decorti Cortinas e Persianas</p>
+            </div>
+        </main>
+    <footer id="contato">
+        <div id="footer_content">
+          <div id="footer_contacts">
+              <img src="img/decorti_logo_black.jpeg" alt="Decorti cortinas e persianas" width="200">
+  
+              <div id="footer_social_media">
+                  <a href="https://www.instagram.com/decorti_cortinasepersianas/" class="footer-link" id="instagram">
+                      <i class="fa-brands fa-instagram"></i>
+                  </a>
+  
+                  <a href="https://www.facebook.com/profile.php?id=61556028490687" class="footer-link" id="facebook">
+                      <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+  
+                  <a href="https://api.whatsapp.com/send?phone=5517997499338&text=Ol%C3%A1,%20Vi%20o%20site%20da%20Decorti%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" class="footer-link" id="whatsapp">
+                      <i class="fa-brands fa-whatsapp" ></i>
+                  </a>
+                  
+              </div>
+              <div class="locemail">
+                <div class="email">
+                <i class="fa-regular fa-envelope"></i>
+                <p>decorticortinasepersianas@gmail.com</p>
+              </div>
+              <div class="local">
+              <i class="fa-solid fa-location-dot" style="color: #ff0000;"></i><p>São José do Rio Preto e Região</p>
+            </div>
+            </div>
+          </div>
+          
+          <ul class="footer-list">
+              <li>
+                  <h3>Menu</h3>
+              </li>
+              <li>
+                  <a href="index.html" class="footer-link">Home</a>
+              </li>
+              
+          </ul>
+  
+      </footer>
+</body>
+</html>
